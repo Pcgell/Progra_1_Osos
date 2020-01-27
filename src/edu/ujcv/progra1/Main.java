@@ -1,5 +1,7 @@
 package edu.ujcv.progra1;
 
+// @author:  kenneth.vittetoe@ujcv.edu.hn
+
 import java.awt.*;
 
 // *asumimos que la arquitectura es de 32 bits.
