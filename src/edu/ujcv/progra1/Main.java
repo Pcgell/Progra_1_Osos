@@ -3,6 +3,7 @@ package edu.ujcv.progra1;
 // @author:  kenneth.vittetoe@ujcv.edu.hn
 
 import java.awt.*;
+import java.util.Random;
 
 // *asumimos que la arquitectura es de 32 bits.
 // tipos de dato primitivos son conjuntos de bits
@@ -41,6 +42,52 @@ import java.awt.*;
 //        (1,11,2,22,3,33)
 
 
+// Proyecto 1 Caluladora
+// *debe sumar restar multiplicar y dividir
+// *debe tener una interface por consola con un menu
+// *debe operar con numeros de punto flotante.
+// *los resultados deben de tener 2 numeros despues del punto.
+// *debe de tener una opcion en el menu pricipal para salir.
+// * no debe de dejar de ejecutar repentinamente.
+
+// Proyecto 2 Car Wash
+// una empresa de carwash dedesea comisionar la creacion de un sistema de ventas.
+// ofrece 3 servicios.
+//   1. Lavado sencillo    L.100 exempto de impusetos
+//   2. Lavado y aspirado  L.150
+//   3. Lavado de motor.   L.300
+//   4. salir.
+
+// el cliente va a poder escoger entre una de las primeras dos opciones y la tercera.
+
+// caer en otra pantallan upsale. debe tener 5 productos mas
+// 1.aromatizantes
+// 2.comida
+// 3. ...
+// 4.cancelar
+
+
+
+// 1.debe de pedir nombre y RTN
+// 2.cancelar
+
+// y debe de presentar en la factuara debe de presentar
+// *el nombre de el negocio
+// *el cai del negocio
+// *el numero de factura
+// *el nombre de la persona o consumidor final
+// *numero de RTN o RTN consumidor final 0000-0000-00000-0
+// *lista de los productos y precios
+// subtotal
+// Impuestos
+// Total.
+// presione cualquier tecla para continuar..
+
+
+
+
+
+
 public class Main {
 
 
@@ -53,44 +100,47 @@ public class Main {
 //        }
 
 
-        int[] arreglo = {9,3,3,4,3,46,52,3,4,3,4};
-        int ultimoArreglo = arreglo.length - 1;
+        System.out.println(RandomPicker.escogerAlumnoAleatorio());
 
 
-
-
-        int[] temporal = new int[arreglo.length + 1];
-        temporal[temporal.length - 1] = 5;
-
-        for (int i = 0; i < arreglo.length; i++) {
-            temporal[i] = arreglo[i];
-        }
-
-        arreglo = temporal;
-        ultimoArreglo = arreglo.length - 1;
-
-
-
-        for (int i = 0; i < arreglo.length; i++) {
-            System.out.println(arreglo[ultimoArreglo - i]);
-        }
-        boolean esViernes = false;
-        int x = 2;
-
-        for (int i = 0 ; i < 3; i++) {
-            esViernes = !esViernes;
-            x++;
-            if (x >= 4) {
-                System.out.println("Hola osos!!!");
-
-
-                if (esViernes) {
-                    System.out.println("hoy es viernes!! :)");
-                } else {
-                    System.out.println("hoy no es viernes D:");
-                }
-            }
-        }
+//        int[] arreglo = {9,3,3,4,3,46,52,3,4,3,4};
+//        int ultimoArreglo = arreglo.length - 1;
+//
+//
+//
+//
+//        int[] temporal = new int[arreglo.length + 1];
+//        temporal[temporal.length - 1] = 5;
+//
+//        for (int i = 0; i < arreglo.length; i++) {
+//            temporal[i] = arreglo[i];
+//        }
+//
+//        arreglo = temporal;
+//        ultimoArreglo = arreglo.length - 1;
+//
+//
+//
+//        for (int i = 0; i < arreglo.length; i++) {
+//            System.out.println(arreglo[ultimoArreglo - i]);
+//        }
+//        boolean esViernes = false;
+//        int x = 2;
+//
+//        for (int i = 0 ; i < 3; i++) {
+//            esViernes = !esViernes;
+//            x++;
+//            if (x >= 4) {
+//                System.out.println("Hola osos!!!");
+//
+//
+//                if (esViernes) {
+//                    System.out.println("hoy es viernes!! :)");
+//                } else {
+//                    System.out.println("hoy no es viernes D:");
+//                }
+//            }
+//        }
 
 
 
