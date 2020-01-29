@@ -94,8 +94,8 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-//        for(int i = 0; i < 3; i++) {
-//            System.out.println("Hola osos!!!");
+//        for(int i = 0; i < 3; ++) {
+//            System.out.println("Hola voluntarios!!!");
 //            System.out.println("hoy es miercoles");
 //        }
 
@@ -131,7 +131,7 @@ public class Main {
 //            esViernes = !esViernes;
 //            x++;
 //            if (x >= 4) {
-//                System.out.println("Hola osos!!!");
+//                System.out.println("Hola voluntarios!!!");
 //
 //
 //                if (esViernes) {
