@@ -92,56 +92,14 @@ public class Main {
 
 
     public static void main(String[] args) {
-	// write your code here
+        LectorTeclado lt = LectorTeclado.getInstance();
 
-//        for(int i = 0; i < 3; ++) {
-//            System.out.println("Hola voluntarios!!!");
-//            System.out.println("hoy es miercoles");
-//        }
+        System.out.println("ingrese un numero entero");
 
-
-        System.out.println(RandomPicker.escogerAlumnoAleatorio());
+        int ejemplo = lt.obtenerEnteroValidado("vuelva a intentar");
 
 
-//        int[] arreglo = {9,3,3,4,3,46,52,3,4,3,4};
-//        int ultimoArreglo = arreglo.length - 1;
-//
-//
-//
-//
-//        int[] temporal = new int[arreglo.length + 1];
-//        temporal[temporal.length - 1] = 5;
-//
-//        for (int i = 0; i < arreglo.length; i++) {
-//            temporal[i] = arreglo[i];
-//        }
-//
-//        arreglo = temporal;
-//        ultimoArreglo = arreglo.length - 1;
-//
-//
-//
-//        for (int i = 0; i < arreglo.length; i++) {
-//            System.out.println(arreglo[ultimoArreglo - i]);
-//        }
-//        boolean esViernes = false;
-//        int x = 2;
-//
-//        for (int i = 0 ; i < 3; i++) {
-//            esViernes = !esViernes;
-//            x++;
-//            if (x >= 4) {
-//                System.out.println("Hola voluntarios!!!");
-//
-//
-//                if (esViernes) {
-//                    System.out.println("hoy es viernes!! :)");
-//                } else {
-//                    System.out.println("hoy no es viernes D:");
-//                }
-//            }
-//        }
-
+        System.out.println("el numero entero es:" +ejemplo );
 
 
     }
