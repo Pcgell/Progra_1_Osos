@@ -56,8 +56,15 @@ public class LectorTeclado {
     public double obtenerNumero(){
         return 0.0;
     }
-    public double obtenerNumeroValidado(){
-        return 0.0;
+    public double obtenerNumeroValidado(String mensajeReintento){
+        double retval = 0;
+
+        while (!m_SC.hasNextDouble()){
+            m_SC.next();
+            System.out.println(mensajeReintento);
+        }
+        retval = m_SC.nextDouble();
+        return retval;
     }
 
 

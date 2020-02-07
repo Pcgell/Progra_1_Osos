@@ -2,8 +2,7 @@ package edu.ujcv.progra1;
 
 // @author:  kenneth.vittetoe@ujcv.edu.hn
 
-import java.awt.*;
-import java.util.Random;
+import java.util.Scanner;
 
 // *asumimos que la arquitectura es de 32 bits.
 // tipos de dato primitivos son conjuntos de bits
@@ -84,23 +83,93 @@ import java.util.Random;
 // presione cualquier tecla para continuar..
 
 
+// Metodos o funciones
+// *generalmente retornan un solo valor. pueden retornar void.
+//    tipos de dato primitivos, Objetos, o void
+// * generalmente tienen Parametros o argumentos
+//   tipos de dato primitivos, Objetos
+// *Tiene un Nombre valido
+//   que significa un nombre valido
+//      1. 'nombre' y 'lista de argumenots' unica
+//      2.  los nombres no pueden empezar con numeros.
+//      3. no pueden empezar con symbolos especiales con excepto por el gion bajo
+// *tienen un cuerpo delimitado por llaves  {}
+//  --en java deben ir dentro de una clase.
+
+
+// instanciacion de objetos.
+// los objetos se instancian utilizando la palabra clave new
+// Integer n = new Integer(5);
+// Scanner sc = new Scanner(System.in);
+
+
+// la palabra clave static
+// se puede utilizar en los miembrios de una
+// utilizado con metodos los metodos se vuelven metodos de la clase y no de la instancia.
+// utilizado con variables. la variable se vuelve una varaible compartida por todas las instancias.
 
 
 
 
 public class Main {
+    static double pi = 33;
+
+    public  int suma (int a, int b){
+
+        return a + b;
+    }
+
+    public static void metodo(int d){
+
+        Main m = new Main();
+        int resultado = m.suma(4,d);
+        if(resultado > 6){
+            return;
+        }
+        System.out.println("estamos ejecutando la linea 112!!");
+    }
 
 
     public static void main(String[] args) {
+
+        Main m  = new Main();
+
+        Integer n = 5;
+
+        int y = n;
+
+
         LectorTeclado lt = LectorTeclado.getInstance();
 
         System.out.println("ingrese un numero entero");
+        int x = lt.obtenerEntero(5,"ingreso algo que no es numero se usara 5");
 
-        int ejemplo = lt.obtenerEnteroValidado("vuelva a intentar");
+        System.out.println("ingrese otro numero");
+        int b = lt.obtenerEntero(5,"ingreso algo que no es numero se usara 5");
+
+        int c = m.suma(b,x);
+
+        metodo(c);
+
+        System.out.println(String.format("la suma de %d y %d es %d",b,x,c));
 
 
-        System.out.println("el numero entero es:" +ejemplo );
+
+        String alumno1 = RandomPicker.escogerAlumnoAleatorio();
+
+        String alumno2 = RandomPicker.escogerAlumnoAleatorio();
+
+        while(alumno1.equals(alumno2)){
+            alumno2 = RandomPicker.escogerAlumnoAleatorio();
+        }
+
+
+        System.out.print(alumno1);
+
+        System.out.println(" vs "+alumno2);
 
 
     }
+
+
 }
