@@ -2,6 +2,7 @@ package edu.ujcv.progra1;
 
 // @author:  kenneth.vittetoe@ujcv.edu.hn
 
+import javax.swing.text.Utilities;
 import java.util.Scanner;
 
 // *asumimos que la arquitectura es de 32 bits.
@@ -171,5 +172,69 @@ public class Main {
 
     }
 
+    // defina un metodo que intercambie los valores de dos enteros.
 
+
+    //public static "tipo retorno"  "nombre valido descriptivo"  "lista de argumentos "
+
+    public static void swap (Integer a, Integer b){
+
+        // a: 5    b:  3
+       a = a + b; // a: 8 b: 3
+       b = a - b; // a: 8 b: 5
+       a = a - b; // a : 3 b: 5
+
+    }
+
+    // defina un metodo que reciba dos arreglos ordenados y devuelva un arreglo ordenado.
+    // a :1,3,5,7
+    // b :2,4,6
+
+    // c :1,2,3,4,5,6,7
+
+    public static int[] combinarArreglos(int[] a, int[] b){
+        /*
+        int[] c = new int[a.length + b.length];
+        for (int i = 0; i < a.length; i++) {
+            c[i] = a[i];
+        }
+        for (int i = 0; i < b.length; i++) {
+            c[i+ a.length]= b[i];
+        }
+
+        for (int i = 0; i <c.length; i++) {
+            for (int j = 0; j < c.length; j++) {
+                if(c[i] < c[j]){
+                    swap(c[i],c[j]);
+                }
+            }
+        }
+        return c;
+        /*/
+
+        int[] c = new int[a.length + b.length];
+        int i = 0, j = 0, k = 0;
+        for (; i < a.length && j < b.length && k < c.length; k++) {
+            if (a[i] < b[j]) {
+                c[k] = a[i++];
+            }else{
+                c[k] = b[j++];
+            }
+        }
+
+        if(i < a.length){
+            for (; i < a.length ; i++) {
+                c[k++] = a[i];
+            }
+        }else{
+            for (; j < b.length ; j++) {
+                c[k++] = b[j];
+            }
+        }
+
+
+
+        return c;
+        //*/
+    }
 }
