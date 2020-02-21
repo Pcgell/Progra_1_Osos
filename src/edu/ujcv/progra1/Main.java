@@ -132,42 +132,27 @@ public class Main {
 
 
     public static void main(String[] args) {
-
-        Main m  = new Main();
-
-        Integer n = 5;
-
-        int y = n;
+        VecR2 a = new VecR2(2,3);
 
 
-        LectorTeclado lt = LectorTeclado.getInstance();
-
-        System.out.println("ingrese un numero entero");
-        int x = lt.obtenerEntero(5,"ingreso algo que no es numero se usara 5");
-
-        System.out.println("ingrese otro numero");
-        int b = lt.obtenerEntero(5,"ingreso algo que no es numero se usara 5");
-
-        int c = m.suma(b,x);
-
-        metodo(c);
-
-        System.out.println(String.format("la suma de %d y %d es %d",b,x,c));
+        VecR2 b = new VecR2(-5,7);
 
 
 
-        String alumno1 = RandomPicker.escogerAlumnoAleatorio();
+        System.out.println(String.format("la magnitude del vector i: %.2f y j:  %.2f es :%.2f",a.getI(),a.getJ(),a.getMagnitude()));
+        VecR2 unitario = a.normal();
+        System.out.println(String.format("la magnitude del vector i: %.2f y j:  %.2f es :%.2f",unitario.getI(),unitario.getJ(),unitario.getMagnitude()));
 
-        String alumno2 = RandomPicker.escogerAlumnoAleatorio();
+        /*
+        VecR2 resultado =  VecR2.suma(VecR2.suma(b,a),unitario);
+        /*/
 
-        while(alumno1.equals(alumno2)){
-            alumno2 = RandomPicker.escogerAlumnoAleatorio();
-        }
+         VecR2 resultado =  a.suma(b).suma(unitario);
+         //*/
 
+        System.out.println(String.format("el vector i: %.2f y j:  %.2f"
+                ,resultado.getI(),resultado.getJ()));
 
-        System.out.print(alumno1);
-
-        System.out.println(" vs "+alumno2);
 
 
     }
