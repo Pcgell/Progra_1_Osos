@@ -20,17 +20,26 @@ package edu.ujcv.progra1;
 // mutacion de los miembros
 // inicializar el estado del objeto
 
-
+//VecR2 VecR3 VecR4
 
 public class VecR2 {
 
     private double i; // x
     private double j; // y
 
-
+// conveniencia
     public VecR2(double i, double j){
         this.i = i;
         setJ(j);
+    }
+    // por defecto
+    public VecR2(){
+
+    }
+
+    public VecR2(VecR2 b){
+        this.i = b.i;
+        this.j = b.j;
     }
 
 //accesoras o geters
@@ -55,7 +64,7 @@ public class VecR2 {
         // pitagoras
         // c  = sqrt(a ^2 + b ^2)
 
-        return  Math.sqrt( Math.pow(i,2) + j*j);
+        return  Math.sqrt( dotProduct(this));
     }
 
     VecR2 normal(){
@@ -79,4 +88,23 @@ public class VecR2 {
 
         return retval ;
     }
+
+    public VecR2 resta(VecR2 b){
+        return this.suma(b.negacion());
+    }
+
+    public VecR2 negacion(){
+        VecR2 retval = new VecR2(-this.i,-this.j);
+        return retval;
+    }
+
+
+    public double dotProduct(VecR2 b){
+
+
+       return this.i * b.i + this.j * b.j;
+
+    }
+
+
 }

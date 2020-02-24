@@ -138,7 +138,6 @@ public class Main {
         VecR2 b = new VecR2(-5,7);
 
 
-
         System.out.println(String.format("la magnitude del vector i: %.2f y j:  %.2f es :%.2f",a.getI(),a.getJ(),a.getMagnitude()));
         VecR2 unitario = a.normal();
         System.out.println(String.format("la magnitude del vector i: %.2f y j:  %.2f es :%.2f",unitario.getI(),unitario.getJ(),unitario.getMagnitude()));
