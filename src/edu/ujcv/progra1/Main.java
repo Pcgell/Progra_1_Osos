@@ -3,6 +3,7 @@ package edu.ujcv.progra1;
 // @author:  kenneth.vittetoe@ujcv.edu.hn
 
 import javax.swing.text.Utilities;
+import java.util.Random;
 import java.util.Scanner;
 
 // *asumimos que la arquitectura es de 32 bits.
@@ -113,6 +114,10 @@ import java.util.Scanner;
 
 
 public class Main {
+
+
+
+
     static double pi = 33;
 
     public  int suma (int a, int b){
@@ -132,25 +137,24 @@ public class Main {
 
 
     public static void main(String[] args) {
-        VecR2 a = new VecR2(2,3);
+
+        Random r = new Random();
+
+        int numero = r.nextInt(10000000) + 50; // 50 a 100
+
+        //int numero = (int) (Math.random() * 50) + 50; //50 - 99
 
 
-        VecR2 b = new VecR2(-5,7);
+        DinArray arreglo = new DinArray();
 
+        for (int i = 0; i < numero; i++) {
+            arreglo.add(r.nextInt(201) - 100);
+        }
 
-        System.out.println(String.format("la magnitude del vector i: %.2f y j:  %.2f es :%.2f",a.getI(),a.getJ(),a.getMagnitude()));
-        VecR2 unitario = a.normal();
-        System.out.println(String.format("la magnitude del vector i: %.2f y j:  %.2f es :%.2f",unitario.getI(),unitario.getJ(),unitario.getMagnitude()));
+        for (int i =0 ; i < arreglo.getSize(); i++){
+            System.out.println(arreglo.get(i));
 
-        /*
-        VecR2 resultado =  VecR2.suma(VecR2.suma(b,a),unitario);
-        /*/
-
-         VecR2 resultado =  a.suma(b).suma(unitario);
-         //*/
-
-        System.out.println(String.format("el vector i: %.2f y j:  %.2f"
-                ,resultado.getI(),resultado.getJ()));
+        }
 
 
 

@@ -1,5 +1,6 @@
 package edu.ujcv.progra1;
 
+// niveles de accesso
 // public
 // package - por defecto.
 // protected
@@ -15,10 +16,15 @@ package edu.ujcv.progra1;
 // 3. polymorfismo
 
 // Objetos: TDA + encapsulacion(estratificacion o contencion). //small talk.
-// miembros privados - datos privados
-// acceso a los miembros
-// mutacion de los miembros
-// inicializar el estado del objeto
+//1) miembros privados - datos privados
+//2) accesoras y mutadoras (geters y setters)
+//3) inicializar el estado del objeto (Constructores)
+
+
+// si cumplen con los enunciados anteriores se puede decir que el objeto esta bien encapsulado.
+
+// Objetos:  conjunto de metodos que afectan un conjunto de miembros bien encapsulados.
+//          general mente un Objeto busca resolver un solo problema.(principios SOLID 1)
 
 //VecR2 VecR3 VecR4
 
@@ -26,6 +32,7 @@ public class VecR2 {
 
     private double i; // x
     private double j; // y
+
 
 // conveniencia
     public VecR2(double i, double j){

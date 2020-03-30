@@ -5,24 +5,30 @@ import java.util.Random;
 public class RandomPicker {
 
 
+    public static void main(String[] args){
+        System.out.println(escogerAlumnoAleatorio());
+    }
+
 
 
     public static final String[] voluntarios = {
             "Kiana C.",
-            "Hector T.",
+           // "Hector T.",
             "Ariel T.",
-            "Fernando C.",
+            //"Fernando C.",
             "Jonathan L.",
             //"Allison P.",
             //"Andrew R.",
-            "Josias F.",
+            //"Josias F.",
             //"Renan S.",
-            //"Ricardo H.",
-            //"Cristian M.",
-            "Jaime V",
-            "Kathya M.",
+            "Ricardo H.",
+            "Cristian M.",
+            //"Jaime V",
+            //"Kathya M.",
             "Lizzy L",
-            "Yansi F."};
+            //"Yansi F."
+
+    };
 
 
     public static String escogerAlumnoAleatorio(){
