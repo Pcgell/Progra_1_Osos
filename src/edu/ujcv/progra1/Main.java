@@ -110,10 +110,84 @@ import java.util.Scanner;
 // utilizado con metodos los metodos se vuelven metodos de la clase y no de la instancia.
 // utilizado con variables. la variable se vuelve una varaible compartida por todas las instancias.
 
+//****
+
+// PARCIAL III
+
+//****
+
+
+// plantillas (genericas)
+
+
+// Arreglos dinamicos
+// addfirst : void 'o'  bool
+// add(index) : void 'o'  bool
+// addlast : void 'o'  bool
+
+//remove(index) : void 'o'  element
+//removeLast()  : void 'o'  element
+//removeFirst   : void 'o'  element
+
+
+// get(index)  : element
+
+
+// Cola :: QUEUE  (cue)
+// es una estructura de datos que se comporta de forma (FIFO) por sus siglas en ingles.
+// First in first out: primero en entrar primero en salir.
+// es una fila por ejemplo en un banco.
+
+// add     void 'o'  element
+// 'o'
+// enqueue  void 'o'  element
+
+
+//remove  void 'o'  element
+//'o'
+//dequeue  void 'o'  element
+
+// peek    element
+
+
+
+// Pila  :: STACK
+// es una estructura de datos que se comporta de forma (Lifo) por sus siglas en ingles.
+// Last in first out : ultimo en entrar primero en salir.
+// ejemplo los platos. o inventarios en bodegas.
+
+// push  void 'o'  bool
+
+
+//pop  void 'o'  element
+
+//peek    element
+
+
+
+
+
+// Metodos comunes
+
+// isEmpty(): bool
+
+//    while (!edd.isEmpty()){
+//         Dato d = edd.peek()
+//         edd.remove()
+//         ... hacer algo con el elemento d obtenido
+//         }
+
+
+// getSize()
 
 
 
 public class Main {
+
+
+    static <T> String imprimir(T a){
+        return "el Objeto enviado es:"+ a;
+    }
 
 
 
@@ -140,23 +214,21 @@ public class Main {
 
         Random r = new Random();
 
-        int numero = r.nextInt(10000000) + 50; // 50 a 100
+        int numero = r.nextInt(1000) + 50; // 50 a 100
 
         //int numero = (int) (Math.random() * 50) + 50; //50 - 99
 
 
-        DinArray arreglo = new DinArray();
+        DinArray arreglo = new DinArray<String>();
 
         for (int i = 0; i < numero; i++) {
-            arreglo.add(r.nextInt(201) - 100);
+            arreglo.add("el numero es:" + (r.nextInt(201) - 100));
         }
 
         for (int i =0 ; i < arreglo.getSize(); i++){
             System.out.println(arreglo.get(i));
 
         }
-
-
 
     }
 
