@@ -8,8 +8,6 @@ public class Pila<T> {
     }
 
     public void push(T element){
-        //if ocupa crecer
-
        datos.add(element);
     }
 
@@ -19,5 +17,11 @@ public class Pila<T> {
 
     public T peek(){
         return datos.get(datos.getSize() - 1);
+    }
+
+    public boolean isEmpty(){
+        if (datos.getSize() == 0)
+            return true;
+        return false;
     }
 }

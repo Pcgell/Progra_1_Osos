@@ -182,7 +182,76 @@ import java.util.Scanner;
 
 
 
+//Tema de recursion
+// preparacion saber factoriales, serie de fibonacci, recursividad.
+
+
+// 5! = 5 * 4! :   5 * 24 -> 120       entonces  5! es igual a 120
+
+// 4! = 4 * 3! :   4 * 6 -> 24
+
+// 3! = 3 * 2! :   3 * 2 -> 6
+
+// 2! = 2 * 1! :   2 * 1 -> 2
+
+// 1! = 1      :   1
+
+
+
+
+
+
+// serie fibonacci
+// 0 1 1 2 3 5 8 13
+
+
+// Recursion: es un metodo que se llama asi mismo de forma directa o indirecta y depende de un caso base para frenar la recursion.
+
+
 public class Main {
+
+
+
+    public static int fibonacci(int a, int b){
+        return a+b;
+
+    }
+
+    public static int factorialIterarivo(int a){
+
+        int retval = 1;
+        for (int i = a; i >= 1; i--) {
+            retval = i * retval;
+        }
+        return retval;
+
+    }
+
+
+    public static int factorial(int a){
+        if (a <= 1)
+            return 1;
+        return a * factorial(a-1);
+    }
+
+
+    public static int factorialP(int a){
+        Pila<Integer> stack = new Pila<Integer>();
+
+        while(a >= 1){
+            stack.push(a);
+            a--;
+        }
+
+        int retval = 1;
+
+        while (!stack.isEmpty()){
+            retval*= stack.pop();
+        }
+
+        return retval;
+
+    }
 
 
     static <T> String imprimir(T a){
@@ -212,89 +281,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Random r = new Random();
+        System.out.println(factorialIterarivo(5));
 
-        int numero = r.nextInt(1000) + 50; // 50 a 100
+        System.out.println(factorial(5));
 
-        //int numero = (int) (Math.random() * 50) + 50; //50 - 99
-
-
-        DinArray arreglo = new DinArray<String>();
-
-        for (int i = 0; i < numero; i++) {
-            arreglo.add("el numero es:" + (r.nextInt(201) - 100));
-        }
-
-        for (int i =0 ; i < arreglo.getSize(); i++){
-            System.out.println(arreglo.get(i));
-
-        }
-
+        System.out.println(factorialP(5));
     }
 
-    // defina un metodo que intercambie los valores de dos enteros.
-
-
-    //public static "tipo retorno"  "nombre valido descriptivo"  "lista de argumentos "
-
-    public static void swap (Integer a, Integer b){
-
-        // a: 5    b:  3
-       a = a + b; // a: 8 b: 3
-       b = a - b; // a: 8 b: 5
-       a = a - b; // a : 3 b: 5
-
-    }
-
-    // defina un metodo que reciba dos arreglos ordenados y devuelva un arreglo ordenado.
-    // a :1,3,5,7
-    // b :2,4,6
-
-    // c :1,2,3,4,5,6,7
-
-    public static int[] combinarArreglos(int[] a, int[] b){
-        /*
-        int[] c = new int[a.length + b.length];
-        for (int i = 0; i < a.length; i++) {
-            c[i] = a[i];
-        }
-        for (int i = 0; i < b.length; i++) {
-            c[i+ a.length]= b[i];
-        }
-
-        for (int i = 0; i <c.length; i++) {
-            for (int j = 0; j < c.length; j++) {
-                if(c[i] < c[j]){
-                    swap(c[i],c[j]);
-                }
-            }
-        }
-        return c;
-        /*/
-
-        int[] c = new int[a.length + b.length];
-        int i = 0, j = 0, k = 0;
-        for (; i < a.length && j < b.length && k < c.length; k++) {
-            if (a[i] < b[j]) {
-                c[k] = a[i++];
-            }else{
-                c[k] = b[j++];
-            }
-        }
-
-        if(i < a.length){
-            for (; i < a.length ; i++) {
-                c[k++] = a[i];
-            }
-        }else{
-            for (; j < b.length ; j++) {
-                c[k++] = b[j];
-            }
-        }
-
-
-
-        return c;
-        //*/
-    }
 }

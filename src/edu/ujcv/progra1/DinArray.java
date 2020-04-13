@@ -40,6 +40,27 @@ public class DinArray <T> {
         datos[size++] = element;
     }
 
+    public void addAtIndex(T element, int index){
+        if(index > size){
+            throw new IndexOutOfBoundsException(index+" esta fuera de rango del arreglo ");
+        }
+
+        size++;
+        if(size >= datos.length){
+            crecer();
+        }
+
+        T temp = datos[index];
+        datos[index] = element;
+        for (int i = index + 1 ; i <size ; i++) {
+            element = datos[i];
+            datos[i] = temp;
+            temp = element;
+
+        }
+
+    }
+
 
     public int getSize(){
         return size;
